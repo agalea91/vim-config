@@ -1,3 +1,8 @@
+
+"
+" Vundle package managerconfig
+"
+"
 set nocompatible              " required
 filetype off                  " required
 
@@ -21,10 +26,16 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 set hlsearch
 
-set encoding=utf-8
-set nu " line numbers (use :set nonu to turn off)
-set formatoptions-=t " no auto-intert of line breaks, keep line wrap enabled
 
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" Ignore above and add / modify config below
+""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""
+" Python PEP-8 formatting
+"""
 au BufNewFile,BufRead *.py :
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -34,21 +45,42 @@ au BufNewFile,BufRead *.py :
     \ set autoindent |
     \ set fileformat=unix |
 
-au BufNewFile,BufRead *.js, *.html, *.css :
+au BufNewFile,BufRead *.js,*.html,*.css :
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
+
+"""
+" Misc
+"""
+set encoding=utf-8
+" set nu " line numbers (use :set nonu to turn off)
+set formatoptions-=t " no auto-intert of line breaks, keep line wrap enabled
+set backspace=indent,eol,start " backspace over everything in insert mode
+Plugin 'vim-scripts/indentpython.vim' " Indentaion
+
+""
+" color schemes
+""
+Plugin 'jnurmine/Zenburn'
+colorscheme zenburn
+
+" Plugin 'sickill/vim-monokai'
+" colorscheme monokai
+
 let python_highlight_all=1
 syntax on
 
-Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'altercation/vim-colors-solarized'
-" Plugin 'jnurmine/Zenburn'
-" set background=dark
-" colorscheme zenburn
 
 
-Plugin 'sickill/vim-monokai'
-colorscheme monokai
+
+
+
+
+
+
+
+
+
 
