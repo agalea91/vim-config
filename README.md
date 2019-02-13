@@ -12,7 +12,19 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # then open vim and run `:PluginInstall` to install everything in the .vimrc
 ```
 
- - [Monokai color scheme](https://github.com/sickill/vim-monokai). Note: From the plugins directory in `~/.vim`, move the `monokai.vim` file to your `~/.vim/colors/` directory
+ - [Monokai color scheme](https://github.com/sickill/vim-monokai). Note: From the plugins directory in `~/.vim`, move the `monokai.vim` file to your `~/.vim/colors/` directory.
+
+```
+mkdir ~/.vim/colors
+cp ~/.vim/bundle/vim-monokai/colors/monokai.vim ~/.vim/colors
+```
+
+ - Zenburn color scheme. Note, uncomment `set background=dark` if using this color scheme.
+
+```
+mkdir ~/.vim/colors
+cp ~/.vim/bundle/Zenburn/colors/zenburn.vim ~/.vim/colors/
+```
 
 ### Notes
 

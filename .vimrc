@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible              " required
 filetype off                  " required
 
@@ -19,11 +23,11 @@ Plugin 'gmarik/Vundle.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-set hlsearch
 
-set encoding=utf-8
-set nu " line numbers (use :set nonu to turn off)
-set formatoptions-=t " no auto-intert of line breaks, keep line wrap enabled
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 au BufNewFile,BufRead *.py :
     \ set tabstop=4 |
@@ -34,21 +38,34 @@ au BufNewFile,BufRead *.py :
     \ set autoindent |
     \ set fileformat=unix |
 
+let python_highlight_all=1
+syntax on
+
+Plugin 'vim-scripts/indentpython.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Other 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set hlsearch
+set tags=tags " for ctags
+set encoding=utf-8
+" set nu " line numbers (use :set nonu to turn off)
+set formatoptions-=t " no auto-intert of line breaks, keep line wrap enabled
+
 au BufNewFile,BufRead *.js, *.html, *.css :
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
-let python_highlight_all=1
-syntax on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color scheme 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'altercation/vim-colors-solarized'
-" Plugin 'jnurmine/Zenburn'
-" set background=dark
-" colorscheme zenburn
+Plugin 'jnurmine/Zenburn'
+set background=dark
+colorscheme zenburn
 
-
-Plugin 'sickill/vim-monokai'
-colorscheme monokai
+" Plugin 'sickill/vim-monokai'
+" colorscheme monokai
 
