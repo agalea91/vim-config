@@ -52,8 +52,9 @@ set tags=tags " for ctags
 set encoding=utf-8
 " set nu " line numbers (use :set nonu to turn off)
 set formatoptions-=t " no auto-intert of line breaks, keep line wrap enabled
+set backspace=indent,eol,start " backspace over everything in insert mode
 
-au BufNewFile,BufRead *.js, *.html, *.css :
+au BufNewFile,BufRead *.js,*.html,*.css :
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
@@ -68,4 +69,6 @@ colorscheme zenburn
 
 " Plugin 'sickill/vim-monokai'
 " colorscheme monokai
+
+
 
