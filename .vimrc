@@ -63,12 +63,12 @@ au BufNewFile,BufRead *.js,*.html,*.css :
 " Color scheme 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Plugin 'jnurmine/Zenburn'
-set background=dark
-colorscheme zenburn
+" Plugin 'jnurmine/Zenburn'
+" set background=dark
+" colorscheme zenburn
 
-" Plugin 'sickill/vim-monokai'
-" colorscheme monokai
+Plugin 'sickill/vim-monokai'
+colorscheme monokai
 
 
 
