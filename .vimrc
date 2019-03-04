@@ -59,6 +59,12 @@ au BufNewFile,BufRead *.js,*.html,*.css :
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
+" Return to last edit position when opening files
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,6 +75,4 @@ au BufNewFile,BufRead *.js,*.html,*.css :
 
 Plugin 'sickill/vim-monokai'
 colorscheme monokai
-
-
 
